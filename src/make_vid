@@ -1,0 +1,2 @@
+mencoder mf://*JPG -vc ijpg -mf fps=8 -vf scale=1280:720 -ovc x264 -x264encopts bitrate=5000:keyint=30 -o timelapse_1280x720_x264_8fps_5000.avi 
+

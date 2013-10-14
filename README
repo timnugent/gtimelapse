@@ -1,0 +1,55 @@
+gTimelapse
+
+(c) Tim Nugent
+
+An application for capturing images to generate timelapse videos, built on gPhoto2 and wxWidgets libraries.
+
+
+To compile and install
+======================
+
+Install wxWdigets and gPhoto2 development libraries. Tested on Ubuntu 13.04 using wx-widgets 2.8.12
+and libgphoto2 2.4.14. 
+
+On Ubuntu, you can install these packages:
+
+libgphoto2-2                                               
+libgphoto2-2-dev 
+libwxbase2.8-0 
+libwxbase2.8-dev 
+wx-common
+wx2.8-headers
+
+Next run:
+
+./configure
+make
+sudo make install
+
+To run
+======
+
+- Run 'gtimelapse'
+- Make sure your camera is in the correct mode (e.g. normal/PTP etc):
+  http://www.gphoto.org/proj/libgphoto2/support.php
+- When you've captured your images you can make a video
+  using the 'make_vid' script in the src directory (requires
+  mencoder)
+ 
+To do
+=====
+
+- Refactor code so camera settings are determined whenever 'detect
+  camera' is selected, not just at startup.
+- Fix camera settings tab - sliding window when there are too many
+  setting to fit on the tab.  
+ 
+ 
+Bugs/Comments/Suggestions
+=========================
+
+timnugent@gmail.com
+
+
+
+ 
