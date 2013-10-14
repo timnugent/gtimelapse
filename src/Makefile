@@ -42,7 +42,9 @@ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gp-check-shell-environment.m4 \
 	$(top_srcdir)/m4/gp-config-msg.m4 \
-	$(top_srcdir)/m4/gp-pkg-config.m4 \
+	$(top_srcdir)/m4/gp-pkg-config.m4 $(top_srcdir)/m4/libtool.m4 \
+	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/m4/gp-check-library.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -101,16 +103,17 @@ CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2 
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"gTimelapse\" -DPACKAGE_TARNAME=\"gtimelapse\" -DPACKAGE_VERSION=\"1.0\" -DPACKAGE_STRING=\"gTimelapse\ 1.0\" -DPACKAGE_BUGREPORT=\"timnugent@gmail.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"gtimelapse\" -DVERSION=\"1.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DHAVE_LIBGPHOTO2=1
+DEFS = -DPACKAGE_NAME=\"gTimelapse\" -DPACKAGE_TARNAME=\"gtimelapse\" -DPACKAGE_VERSION=\"1.0\" -DPACKAGE_STRING=\"gTimelapse\ 1.0\" -DPACKAGE_BUGREPORT=\"timnugent@gmail.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"gtimelapse\" -DVERSION=\"1.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBGPHOTO2=1
 DEPDIR = .deps
-ECHO = echo
+DLLTOOL = false
+DSYMUTIL = 
+DUMPBIN = 
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
 EGREP = /bin/grep -E
 EXEEXT = 
-F77 = f77
-FFLAGS = -g -O2
+FGREP = /bin/grep -F
 GREP = /bin/grep
 HAVE_LIBGPHOTO2_FALSE = #
 HAVE_LIBGPHOTO2_TRUE = 
@@ -118,6 +121,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = ${SHELL} $(install_sh) -c -s
+LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBGPHOTO2_CFLAGS = -I/usr/include/gphoto2 -I/usr/include/libexif  
 LIBGPHOTO2_CONFIG_PROG = 
@@ -125,10 +129,17 @@ LIBGPHOTO2_LIBS = -lgphoto2 -lgphoto2_port -lm -lexif
 LIBOBJS = 
 LIBS =  -L/usr/lib/x86_64-linux-gnu -pthread   -L/usr/lib/x86_64-linux-gnu   -lwx_gtk2u_richtext-2.8 -lwx_gtk2u_aui-2.8 -lwx_gtk2u_xrc-2.8 -lwx_gtk2u_qa-2.8 -lwx_gtk2u_html-2.8 -lwx_gtk2u_adv-2.8 -lwx_gtk2u_core-2.8 -lwx_baseu_xml-2.8 -lwx_baseu_net-2.8 -lwx_baseu-2.8 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
+LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
 MAKEINFO = ${SHELL} /home/tnugent/Src/gtimelapse/config/missing --run makeinfo
+MANIFEST_TOOL = :
+NM = /usr/bin/nm -B
+NMEDIT = 
+OBJDUMP = objdump
 OBJEXT = o
+OTOOL = 
+OTOOL64 = 
 PACKAGE = gtimelapse
 PACKAGE_BUGREPORT = timnugent@gmail.com
 PACKAGE_NAME = gTimelapse
@@ -138,6 +149,7 @@ PACKAGE_URL =
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
+PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
 RANLIB = ranlib
 REQUIREMENTS_FOR_LIBGPHOTO2 = libgphoto2 >= 2.2.1
@@ -156,9 +168,10 @@ WX_LIBS = -L/usr/lib/x86_64-linux-gnu -pthread   -L/usr/lib/x86_64-linux-gnu   -
 WX_LIBS_STATIC = 
 WX_RESCOMP = 
 WX_VERSION = 2.8.12
+ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
-ac_ct_F77 = f77
+ac_ct_DUMPBIN = 
 am__fastdepCC_FALSE = #
 am__fastdepCC_TRUE = 
 am__fastdepCXX_FALSE = #
