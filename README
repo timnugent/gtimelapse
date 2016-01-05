@@ -8,7 +8,7 @@ An application for capturing images to generate timelapse videos, built on gPhot
 To compile and install
 ======================
 
-Install wxWdigets and gPhoto2 development libraries. Tested on Ubuntu 13.04 using wx-widgets 2.8.12 and libgphoto2 2.4.14. 
+Install wxWdigets and gPhoto2 development libraries. Tested on Ubuntu 14.04 using wx-widgets 2.8.12 and libgphoto2 2.4.14. 
 
 On Ubuntu, you can install these packages:
 
